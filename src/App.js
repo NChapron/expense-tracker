@@ -1,7 +1,7 @@
 import React from "react";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/expenses/Expenses";
 
-function App() {
+const App = () => {
   // DUMMY_DATA to set-up the Expense-Tracker
   const expenses = [
     {
@@ -25,6 +25,15 @@ function App() {
     },
   ];
 
+  // This is why we need to have only one root element. This is the code execute under the hood. In modern react.js we use JSX.
+
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
   return (
     <div>
       <h2>Let's get started!</h2>
@@ -32,6 +41,6 @@ function App() {
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;

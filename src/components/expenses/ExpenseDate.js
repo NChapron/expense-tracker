@@ -1,7 +1,7 @@
 import React from "react";
 import "./ExpenseDate.css";
 
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
   // For the format, check the doc {{toLocalString}} online to learn more about the return value
   // To keep the JSX clean it's better to set a variable here with the long code
   const month = props.date.toLocaleString("en-GB", { month: "long" });

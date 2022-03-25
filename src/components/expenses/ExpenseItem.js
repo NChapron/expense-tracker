@@ -1,10 +1,10 @@
 import React from "react";
-import ExpenseDate from "./ExpenseDate";
+import ExpenseDate from "../expenses/ExpenseDate";
+import Card from "../UI/Card";
 
 import "./ExpenseItem.css";
-import Card from "./UI/Card";
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   return (
     <Card className="expense-item">
       {/* Here the Components ExpenseDate is nested inside ExpenseItem Components, and the data from App.js is pass through props */}
@@ -15,6 +15,6 @@ function ExpenseItem(props) {
       </div>
     </Card>
   );
-}
+};
 
 export default ExpenseItem;
