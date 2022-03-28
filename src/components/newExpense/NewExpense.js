@@ -7,8 +7,8 @@ const NewExpense = (props) => {
   //save the data pass from ExpenseForm
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
-      ...enteredExpenseData,
       id: Math.random().toString(),
+      ...enteredExpenseData,
     };
 
     // pass data to App
