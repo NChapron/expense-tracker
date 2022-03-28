@@ -26,6 +26,13 @@ const App = () => {
     },
   ];
 
+  // save the data pass from NewExpense
+  const addExpenseHandler = (newExpense) => {
+    console.log("On app js!");
+    console.table(newExpense);
+    console.table(expenses);
+  };
+
   // This is why we need to have only one root element. This is the code execute under the hood. In modern react.js we use JSX.
 
   // return React.createElement(
@@ -36,7 +43,7 @@ const App = () => {
   // );
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       {/* I pass the Dummy data to Expenses.js */}
       <Expenses items={expenses} />
     </div>
