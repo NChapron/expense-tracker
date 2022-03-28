@@ -21,3 +21,5 @@ Limit code duplication by using Components
 React Hook => useState
 
 Listening to user input with React hook useState. onChange 
+
+Handling form submission without reload the page and adding Two-Way Binding as I listen the input and reset them on the submission.
