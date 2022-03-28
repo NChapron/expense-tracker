@@ -19,3 +19,5 @@ The purpose with react is to keep components small and manageable by splitting C
 Limit code duplication by using Components
 
 React Hook => useState
+
+Listening to user input with React hook useState. onChange 
