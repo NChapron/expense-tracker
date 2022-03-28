@@ -1,5 +1,6 @@
 import React from "react";
 import Expenses from "./components/expenses/Expenses";
+import NewExpense from "./components/newExpense/NewExpense";
 
 const App = () => {
   // DUMMY_DATA to set-up the Expense-Tracker
@@ -33,10 +34,9 @@ const App = () => {
   //   React.createElement('h2', {}, "Let's get started!"),
   //   React.createElement(Expenses, { items: expenses })
   // );
-
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       {/* I pass the Dummy data to Expenses.js */}
       <Expenses items={expenses} />
     </div>
