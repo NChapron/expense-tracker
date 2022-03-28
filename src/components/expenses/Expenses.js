@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import ExpenseItem from "../expenses/ExpenseItem";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
+import ExpensesList from "./ExpensesList";
+
 import "./Expenses.css";
 
 const Expenses = (props) => {
@@ -15,21 +16,14 @@ const Expenses = (props) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
+
   return (
     <Card className="expenses">
       <ExpensesFilter
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      {/* I render the list dynamically with .map  */}
-      {filteredExpenses.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-        />
-      ))}
+      <ExpensesList items={filteredExpenses} />
     </Card>
   );
 };
